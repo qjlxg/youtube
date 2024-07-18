@@ -75,7 +75,7 @@ if __name__ == "__main__":
         if sub_url:
             googleDrive_ids = getContent(sub_url, headers)
             print(googleDrive_ids)
-            names = ["clash-meta.yaml", "clash-old.yaml", "ss", "v2ray"]
+            names = ["clash-meta.yaml", "clash-old.yaml", "ss", "v2ray","hy2"]
             for gid, name in zip(googleDrive_ids, names):
                 # gdd.download_file_from_google_drive(
                 #     file_id=googleDrive_ids[0],
