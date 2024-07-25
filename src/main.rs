@@ -12,9 +12,9 @@ use types::Config;
 async fn main() -> Result<()> {
     get().await?;
 
-    let url1 = "https://raw.githubusercontent.com/rxsweet/proxies/main/sub/free.yaml";
-    let url2 = "https://raw.githubusercontent.com/rxsweet/proxies/main/sub/rx.yaml";
-    let url3 = "https://raw.githubusercontent.com/rxsweet/proxies/main/sub/srx.yaml";
+    let url1 = "https://github.com/qjlxg/aggregator/raw/main/data/clash.yaml";
+    let url2 = "https://github.com/qjlxg/hy2/raw/main/configtg.txt";
+    let url3 = "https://github.com/qjlxg/proxy-minging/raw/main/v2ray.txt";
     // 获取url1文件名
     let filename1 = url1.split("/").last().unwrap();
     let filename2 = url2.split("/").last().unwrap();
@@ -44,7 +44,7 @@ async fn read_yaml(file_path: &str) -> Result<Config> {
 // 获取配置文件
 async fn get() -> Result<()> {
     //   let url = "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ssrsub/ssr/master/Clash.yml";
-    let url = "https://raw.githubusercontent.com/ssrsub/ssr/master/Clash.yml";
+    let url = "https://github.com/qjlxg/SubCrawler/raw/main/sub/share/vless";
     let content = get_config(url).await?;
     fs::write("./clash.yaml", &content).await?;
     Ok(())
